@@ -23,8 +23,8 @@ class World {
         this.resizer = new Resizer(this.camera, this.renderer);
 
         // Create and add lights
-        const { ambientLight, pointLight } = createLights();
-        this.scene.add(ambientLight, pointLight);
+        const { directionalLight } = createLights();
+        this.scene.add(directionalLight);
 
         // Create and add helpers for debugging
         const { axesHelper, gridHelper } = createHelpers();

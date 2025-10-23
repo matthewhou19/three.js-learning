@@ -2,7 +2,11 @@ import * as THREE from 'three';
 
 function createCube() {
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const material = new THREE.MeshStandardMaterial({
+        color: 0x00ff00,
+        roughness: 0.5,
+        metalness: 0.5
+    });
     const cube = new THREE.Mesh(geometry, material);
 
     // Animation tick function
